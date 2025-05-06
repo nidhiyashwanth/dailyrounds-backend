@@ -15,12 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.connectDB = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const path_1 = __importDefault(require("path"));
-const envPath = path_1.default.resolve(process.cwd(), ".env");
-console.log("Trying to load .env from:", envPath);
-dotenv_1.default.config({ path: envPath });
+// Load environment variables
+dotenv_1.default.config();
 // MongoDB connection URI
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://dailyr";
+const MONGODB_URI = process.env.MONGODB_URI ||
+    "mongodb+srv://dailyrounds:nZFe0oiljDPVUKw8@dailyrounds-todo.edmfvbm.mongodb.net/dailyrounds";
 // Connect to MongoDB
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
