@@ -6,7 +6,8 @@ dotenv.config();
 
 // MongoDB connection URI
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/todoapp";
+  process.env.MONGODB_URI ||
+  "mongodb+srv://dailyrounds:nZFe0oiljDPVUKw8@dailyrounds-todo.edmfvbm.mongodb.net/dailyrounds";
 
 // Connect to MongoDB
 export const connectDB = async (): Promise<void> => {
